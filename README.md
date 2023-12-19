@@ -1,2 +1,2 @@
-# quant-learn
-Learning Quantitative FInance
+# Quant Learn
+Learning Quantitative Finance
