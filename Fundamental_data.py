@@ -8,6 +8,7 @@ import plotly.graph_objects as go
 import plotly.express as px 
 from pandas.io.html import read_html
 from plotly.subplots import make_subplots
+import matplotlib.pyplot as plt
 
 def process_statements(base_url, num_statements):
     #get urls of all the pages
@@ -44,6 +45,7 @@ def process_statements(base_url, num_statements):
         p = p.drop(p.columns[-1], axis=1)
     p = p.infer_objects()
     p = p.replace(np.nan, "")
+    p.replace("--", 0, inplace = True)
 
     return p
 
