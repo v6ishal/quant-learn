@@ -21,7 +21,7 @@ def process_statements(base_url, num_statements):
     del_count = 0
     p_statements = []
     for i in range(0, len(url)):
-        print(url[i])
+        #print(url[i])
         try:
             df = read_html(url[i], attrs={"class": "mctable1"}, index_col=0, header=0)[0]
             del_count+=1
